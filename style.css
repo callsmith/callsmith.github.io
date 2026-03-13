@@ -284,6 +284,8 @@ a {
    ========================================================== */
 .hero-visual {
   position: relative;
+  min-width: 0;
+  overflow: hidden;
 }
 
 .hero-visual::before {
@@ -990,6 +992,11 @@ footer {
 
   .hero-visual {
     order: -1;
+    max-width: 100%;
+  }
+
+  .app-window {
+    max-width: 100%;
   }
 
   .hero-subtitle {
@@ -1087,14 +1094,20 @@ footer {
   }
 
   .app-window {
-    font-size: 9.5px;
+    font-size: 9px;
+    max-width: 100%;
+    width: 100%;
   }
 
   .app-body {
-    height: 300px;
+    height: 260px;
   }
 
   .app-sidebar {
-    width: 110px;
+    width: 96px;
+  }
+
+  .hero-subtitle {
+    font-size: 1rem;
   }
 }
