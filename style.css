@@ -240,6 +240,28 @@ a {
   align-items: center;
 }
 
+.hero-content-centered {
+  grid-column: 1 / -1;
+  max-width: 640px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.hero-content-centered .hero-eyebrow {
+  justify-content: center;
+}
+
+.hero-content-centered .hero-actions {
+  justify-content: center;
+}
+
+.hero-content-centered .hero-subtitle {
+  max-width: 520px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 32px;
+}
+
 .hero-eyebrow {
   display: flex;
   gap: 8px;

@@ -60,6 +60,8 @@
       "Environment variable substitution",
       "100% offline — works on planes, VPNs, and air-gaps",
       "Searchable local request history",
+      "Seamless import from Insomnia and Postman",
+      "Open and use Bruno collections natively with 100% compatibility",
       "Open source, MIT licensed, free forever"
     ]
   }
@@ -99,7 +101,7 @@
       <div class="container">
         <div class="hero-inner">
 
-          <div class="hero-content">
+          <div class="hero-content hero-content-centered">
             <div class="hero-eyebrow">
               <span class="badge">Free &amp; Open Source</span>
               <span class="badge badge-dev">Early Access</span>
@@ -126,68 +128,6 @@
               </a>
             </div>
             <p class="hero-platforms">Windows &middot; macOS &middot; Linux</p>
-          </div>
-
-          <!-- App window mockup -->
-          <div class="hero-visual" aria-hidden="true">
-            <div class="app-window">
-              <div class="app-titlebar">
-                <div class="traffic-lights">
-                  <span class="tl tl-red"></span>
-                  <span class="tl tl-yellow"></span>
-                  <span class="tl tl-green"></span>
-                </div>
-                <span class="app-title-text">Callsmith</span>
-                <div class="env-indicator">
-                  <span class="env-dot"></span>
-                  <span>production</span>
-                </div>
-              </div>
-              <div class="app-body">
-                <div class="app-sidebar">
-                  <div class="sidebar-heading">My API</div>
-                  <div class="sidebar-item"><span class="m-get">GET</span>/users</div>
-                  <div class="sidebar-item sidebar-active"><span class="m-post">POST</span>/users</div>
-                  <div class="sidebar-item"><span class="m-get">GET</span>/users/{id}</div>
-                  <div class="sidebar-item"><span class="m-del">DEL</span>/users/{id}</div>
-                  <div class="sidebar-divider"></div>
-                  <div class="sidebar-heading">Auth</div>
-                  <div class="sidebar-item"><span class="m-post">POST</span>/login</div>
-                  <div class="sidebar-item"><span class="m-post">POST</span>/refresh</div>
-                </div>
-                <div class="app-editor">
-                  <div class="url-row">
-                    <span class="url-method post">POST</span>
-                    <span class="url-text">https://api.acme.com/v1/<span class="url-segment">users</span></span>
-                    <span class="send-btn">Send</span>
-                  </div>
-                  <div class="editor-tabs">
-                    <span class="etab">Headers</span>
-                    <span class="etab etab-active">Body</span>
-                    <span class="etab">Auth</span>
-                    <span class="etab">Params</span>
-                  </div>
-                  <div class="code-pane req-pane">
-<pre><span class="j-brace">{</span>
-  <span class="j-key">"name"</span><span class="j-p">:</span>  <span class="j-str">"Jane Doe"</span><span class="j-p">,</span>
-  <span class="j-key">"email"</span><span class="j-p">:</span> <span class="j-str">"jane@acme.com"</span><span class="j-p">,</span>
-  <span class="j-key">"role"</span><span class="j-p">:</span>  <span class="j-var">{{defaultRole}}</span>
-<span class="j-brace">}</span></pre>
-                  </div>
-                  <div class="response-bar">
-                    <span class="status-pill s2xx">201 Created</span>
-                    <span class="resp-meta">83 ms &middot; 1.1 KB</span>
-                  </div>
-                  <div class="code-pane resp-pane">
-<pre><span class="j-brace">{</span>
-  <span class="j-key">"id"</span><span class="j-p">:</span>        <span class="j-num">1042</span><span class="j-p">,</span>
-  <span class="j-key">"name"</span><span class="j-p">:</span>      <span class="j-str">"Jane Doe"</span><span class="j-p">,</span>
-  <span class="j-key">"createdAt"</span><span class="j-p">:</span> <span class="j-str">"2026-03-13T10:42Z"</span>
-<span class="j-brace">}</span></pre>
-                  </div>
-                </div>
-              </div>
-            </div>
           </div>
 
         </div>
@@ -300,6 +240,29 @@
             <p>Every request you've ever sent is stored locally in SQLite. Filter by URL, status code, date, or body content. Find that call from last Tuesday and re-send it instantly.</p>
           </div>
 
+          <div class="feature-card">
+            <div class="feature-icon-wrap">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <polyline points="8 17 12 21 16 17"/>
+                <line x1="12" y1="12" x2="12" y2="21"/>
+                <path d="M20.88 18.09A5 5 0 0 0 18 9h-1.26A8 8 0 1 0 3 16.29"/>
+              </svg>
+            </div>
+            <h3>Import from Insomnia &amp; Postman</h3>
+            <p>Migrate your existing workflow in seconds. Callsmith reads Insomnia export files and Postman collections directly — all your requests, environments, and folder structure come across automatically. No manual re-entry.</p>
+          </div>
+
+          <div class="feature-card">
+            <div class="feature-icon-wrap">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>
+                <polyline points="9 22 9 12 15 12 15 22"/>
+              </svg>
+            </div>
+            <h3>Native Bruno Compatibility</h3>
+            <p>Already using Bruno? Point Callsmith at your existing collection folder and open it as-is — no conversion, no re-import, no lock-in. Callsmith reads and writes the same <code>.bru</code> format, so you can switch freely between the two tools without touching your files.</p>
+          </div>
+
         </div>
       </div>
     </section>
@@ -325,6 +288,8 @@
               <li class="why-pro">100% offline — planes, VPNs, air-gaps</li>
               <li class="why-pro">Open source, MIT licensed</li>
               <li class="why-pro">Free forever, no tiers</li>
+              <li class="why-pro">Import from Insomnia &amp; Postman</li>
+              <li class="why-pro">100% Bruno collection compatibility</li>
             </ul>
           </div>
 
