@@ -4,44 +4,41 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <!-- Primary SEO -->
-  <title>Callsmith — Free Native HTTP API Client for Developers</title>
-  <meta name="description" content="Callsmith is a free, native HTTP API client and Postman alternative for developers. No Electron, no accounts, no cloud sync. Runs on Windows, macOS, and Linux.">
+  <title>Callsmith | Native API Client for Serious Developers</title>
+  <meta name="description" content="Callsmith is a fast, local-first native API client. No accounts. No cloud lock-in. Keyboard-first workflow, dynamic environments, deep history search, and seamless imports from Postman, Insomnia, Bruno, and OpenAPI.">
   <meta name="author" content="Callsmith">
   <meta name="application-name" content="Callsmith">
   <meta name="robots" content="index, follow">
   <link rel="canonical" href="https://callsmith.github.io/">
 
-  <!-- Open Graph -->
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="Callsmith">
+  <meta property="og:locale" content="en_US">
   <meta property="og:url" content="https://callsmith.github.io/">
-  <meta property="og:title" content="Callsmith — Free Native HTTP API Client for Developers">
-  <meta property="og:description" content="Think Postman — but native, offline-first, and stored in your git repo. No Electron. No accounts. No compromises.">
+  <meta property="og:title" content="Callsmith | Native API Client for Serious Developers">
+  <meta property="og:description" content="Native speed. Local files. Dynamic environments. Deep request history. Open source and free.">
   <meta property="og:image" content="https://callsmith.github.io/social-preview.png">
+  <meta property="og:image:type" content="image/png">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
-  <meta property="og:image:alt" content="Callsmith — Free Native HTTP API Client for Developers">
+  <meta property="og:image:alt" content="Callsmith native API client marketing preview">
 
-  <!-- Twitter / X -->
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:site" content="@callsmithapp">
-  <meta name="twitter:title" content="Callsmith — Free Native HTTP API Client for Developers">
-  <meta name="twitter:description" content="Think Postman — but native, offline-first, and stored in your git repo. No Electron. No accounts. No compromises.">
+  <meta name="twitter:url" content="https://callsmith.github.io/">
+  <meta name="twitter:title" content="Callsmith | Native API Client for Serious Developers">
+  <meta name="twitter:description" content="A local-first API client that feels instant and keeps your workflow in your control.">
   <meta name="twitter:image" content="https://callsmith.github.io/social-preview.png">
-  <meta name="twitter:image:alt" content="Callsmith — Free Native HTTP API Client for Developers">
-
-  <!-- Theme / Favicon -->
-  <meta name="theme-color" content="#f5922e">
+  <meta name="twitter:image:alt" content="Callsmith native API client marketing preview">
+  <meta name="theme-color" content="#ff7a18">
   <link rel="icon" type="image/svg+xml" href="/favicon.svg">
 
-  <!-- JSON-LD Structured Data -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "SoftwareApplication",
     "name": "Callsmith",
-    "description": "A free, native, cross-platform HTTP API client for developers. No Electron, no accounts, no cloud sync. Works on Windows, macOS, and Linux.",
+    "description": "A native, local-first API client for developers who want speed, control, and zero lock-in.",
     "url": "https://callsmith.github.io/",
     "downloadUrl": "https://github.com/callsmith/callsmith/releases",
     "applicationCategory": "DeveloperApplication",
@@ -53,366 +50,204 @@
       "priceCurrency": "USD"
     },
     "license": "https://github.com/callsmith/callsmith/blob/main/LICENSE",
+    "sameAs": [
+      "https://github.com/callsmith/callsmith"
+    ],
     "featureList": [
-      "Native performance — no Electron, no Chromium",
-      "Git-friendly JSON collections stored on disk",
-      "No account or cloud sync required",
-      "Environment variable substitution",
-      "100% offline — works on planes, VPNs, and air-gaps",
-      "Searchable local request history",
-      "Seamless import from Insomnia and Postman",
-      "Open and use Bruno collections natively with 100% compatibility",
-      "Open source, MIT licensed, free forever"
+      "Native desktop app on .NET and Avalonia",
+      "Ctrl+P command palette and keyboard-first workflow",
+      "Filesystem-native collections that stay git-friendly",
+      "Dynamic environment variables with JSONPath, XPath, and regex extraction",
+      "Secret variable masking and protected history storage",
+      "Powerful multi-filter request history with one-click resend",
+      "Postman, Insomnia, and OpenAPI import with additive merge",
+      "Open Bruno folders directly without conversion",
+      "No account required, no cloud dependency, no forced auto-updates"
     ]
   }
   </script>
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
+  <div class="bg-orb orb-1" aria-hidden="true"></div>
+  <div class="bg-orb orb-2" aria-hidden="true"></div>
+  <div class="grain" aria-hidden="true"></div>
 
-  <!-- ===================== NAV ===================== -->
-  <header class="nav">
-    <div class="container">
-      <div class="nav-inner">
-        <a href="/" class="logo">
-          <svg class="logo-icon" width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true">
-            <path d="M14 3L10 9h4l-4 12 10-13h-5l3-5H14z" fill="currentColor"/>
-          </svg>
-          <span>Callsmith</span>
-        </a>
-        <nav class="nav-links" aria-label="Main navigation">
-          <a href="#features">Features</a>
-          <a href="#platforms">Platforms</a>
-          <a href="https://github.com/callsmith/callsmith" target="_blank" rel="noopener noreferrer">GitHub</a>
-          <a href="https://github.com/callsmith/callsmith/releases" class="nav-cta" target="_blank" rel="noopener noreferrer">Download</a>
-        </nav>
-      </div>
+  <header class="site-header">
+    <div class="container nav-shell reveal">
+      <a class="brand" href="/" aria-label="Callsmith home">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+          <path d="M14 2L8.8 9.3h4L8 22l11.2-13.4h-4.9L18.5 2H14z" fill="currentColor"/>
+        </svg>
+        <span>Callsmith</span>
+      </a>
+      <nav class="main-nav" aria-label="Main navigation">
+        <a href="#features">Features</a>
+        <a href="#difference">Why it wins</a>
+        <a href="#shortcuts">Shortcuts</a>
+        <a href="https://github.com/callsmith/callsmith" target="_blank" rel="noopener noreferrer">GitHub</a>
+      </nav>
+      <a class="btn btn-nav" href="https://github.com/callsmith/callsmith/releases" target="_blank" rel="noopener noreferrer">Download</a>
     </div>
   </header>
 
   <main>
-
-    <!-- ===================== HERO ===================== -->
     <section class="hero">
-      <div class="container">
-        <div class="hero-inner">
-
-          <div class="hero-content hero-content-centered">
-            <div class="hero-eyebrow">
-              <span class="badge">Free &amp; Open Source</span>
-              <span class="badge badge-dev">Early Access</span>
-            </div>
-            <h1>The API client<br>built for developers.</h1>
-            <p class="hero-subtitle">
-              Think Postman — but native, offline-first, and stored in your git repo.
-              No Electron. No account required. No compromise on performance.
-            </p>
-            <div class="hero-actions">
-              <a href="https://github.com/callsmith/callsmith/releases" class="btn btn-primary" target="_blank" rel="noopener noreferrer">
-                <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                  <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
-                  <polyline points="7 10 12 15 17 10"/>
-                  <line x1="12" y1="15" x2="12" y2="3"/>
-                </svg>
-                Download Free
-              </a>
-              <a href="https://github.com/callsmith/callsmith" class="btn btn-ghost" target="_blank" rel="noopener noreferrer">
-                <svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-                  <path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0 1 12 6.844a9.59 9.59 0 0 1 2.504.337c1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.02 10.02 0 0 0 22 12.017C22 6.484 17.522 2 12 2z"/>
-                </svg>
-                View Source
-              </a>
-            </div>
-            <p class="hero-platforms">Windows &middot; macOS &middot; Linux</p>
+      <div class="container hero-grid">
+        <div class="hero-copy hero-copy-wide reveal">
+          <p class="eyebrow">NATIVE API CLIENT • LOCAL-FIRST • OPEN SOURCE</p>
+          <h1>Build API flows at full speed without selling your workflow to the cloud.</h1>
+          <p class="lede">
+            Callsmith gives you native performance, keyboard-first navigation, dynamic environments,
+            and deep history search in one focused desktop app. No account required.
+          </p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="https://github.com/callsmith/callsmith/releases" target="_blank" rel="noopener noreferrer">Download Free</a>
+            <a class="btn btn-ghost" href="https://github.com/callsmith/callsmith" target="_blank" rel="noopener noreferrer">View Source</a>
           </div>
-
+          <ul class="hero-points">
+            <li>Windows, macOS, Linux</li>
+            <li>Single self-contained binary</li>
+            <li>No forced auto-updates</li>
+          </ul>
         </div>
       </div>
     </section>
 
-    <!-- ===================== STATS STRIP ===================== -->
-    <div class="stats-strip">
-      <div class="container">
-        <div class="stats-inner">
-          <div class="stat-item">
-            <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
-            <span>Instant startup</span>
-          </div>
-          <div class="stat-sep"></div>
-          <div class="stat-item">
-            <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/></svg>
-            <span>Single binary</span>
-          </div>
-          <div class="stat-sep"></div>
-          <div class="stat-item">
-            <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
-            <span>No account required</span>
-          </div>
-          <div class="stat-sep"></div>
-          <div class="stat-item">
-            <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="1" y1="1" x2="23" y2="23"/><path d="M16.72 11.06A10.94 10.94 0 0 1 19 12.55M5 12.55a10.94 10.94 0 0 1 5.17-2.39M10.71 5.05A16 16 0 0 1 22.56 9M1.42 9a15.91 15.91 0 0 1 4.7-2.88M8.53 16.11a6 6 0 0 1 6.95 0M12 20h.01"/></svg>
-            <span>Offline-first</span>
-          </div>
-        </div>
+    <section class="ticker" aria-label="Product highlights">
+      <div class="ticker-track">
+        <span>Ctrl+P command palette</span>
+        <span>Alt+R reveal active request</span>
+        <span>Ctrl+Enter send request</span>
+        <span>Dynamic variables with JSONPath/XPath/Regex</span>
+        <span>Secrets masked and protected</span>
+        <span>SQLite request history with deep filters</span>
+        <span>Open Bruno folders natively</span>
+        <span>Import Postman, Insomnia, OpenAPI</span>
       </div>
-    </div>
+    </section>
 
-    <!-- ===================== FEATURES ===================== -->
-    <section class="features" id="features">
+    <section class="section" id="features">
       <div class="container">
-        <div class="section-header">
-          <h2>Everything you need.<br>Nothing you don't.</h2>
-          <p>Callsmith is built around the principle that developer tools should stay out of your way and let you work.</p>
+        <div class="section-head reveal">
+          <p class="kicker">Feature Set</p>
+          <h2>Everything that matters for daily API work</h2>
+          <p>These are implemented now and built for production workflows, not demo checkboxes.</p>
         </div>
-        <div class="features-grid">
 
-          <div class="feature-card">
-            <div class="feature-icon-wrap">
-              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/>
-              </svg>
-            </div>
-            <h3>Native Performance</h3>
-            <p>Built with .NET 10 and Avalonia UI — renders via Skia directly on the GPU. No Electron, no Chromium, no 200 MB runtime. Instant launch and minimal memory usage.</p>
-          </div>
-
-          <div class="feature-card">
-            <div class="feature-icon-wrap">
-              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                <path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"/>
-              </svg>
-            </div>
-            <h3>Git-Friendly Collections</h3>
-            <p>Requests are <code>.callsmith</code> files on your disk — plain JSON, readable in any editor. Commit them to your repo, review them in PRs, share them with your team. No import or export dance.</p>
-          </div>
-
-          <div class="feature-card">
-            <div class="feature-icon-wrap">
-              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                <rect x="3" y="11" width="18" height="11" rx="2" ry="2"/>
-                <path d="M7 11V7a5 5 0 0 1 10 0v4"/>
-              </svg>
-            </div>
-            <h3>Private by Design</h3>
-            <p>No account. No cloud sync. No telemetry. Your API keys, bearer tokens, and request bodies stay on your machine, full stop. It's open source — read the code yourself.</p>
-          </div>
-
-          <div class="feature-card">
-            <div class="feature-icon-wrap">
-              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                <rect x="3" y="3" width="7" height="7"/>
-                <rect x="14" y="3" width="7" height="7"/>
-                <rect x="14" y="14" width="7" height="7"/>
-                <rect x="3" y="14" width="7" height="7"/>
-              </svg>
-            </div>
-            <h3>Full-Visibility Layout</h3>
-            <p>The request editor and response viewer are always on screen simultaneously. Stop switching tabs just to see what your API returned — see everything at a glance.</p>
-          </div>
-
-          <div class="feature-card">
-            <div class="feature-icon-wrap">
-              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                <circle cx="12" cy="12" r="3"/>
-                <path d="M12 1v4M12 19v4M4.22 4.22l2.83 2.83M16.95 16.95l2.83 2.83M1 12h4M19 12h4M4.22 19.78l2.83-2.83M16.95 7.05l2.83-2.83"/>
-              </svg>
-            </div>
-            <h3>Powerful Environments</h3>
-            <p>Write <code>{{variable}}</code> in any URL, header, or body. Define values per environment and switch between dev, staging, and production in one click — no copy-pasting secrets.</p>
-          </div>
-
-          <div class="feature-card">
-            <div class="feature-icon-wrap">
-              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                <line x1="8" y1="6" x2="21" y2="6"/>
-                <line x1="8" y1="12" x2="21" y2="12"/>
-                <line x1="8" y1="18" x2="21" y2="18"/>
-                <line x1="3" y1="6" x2="3.01" y2="6"/>
-                <line x1="3" y1="12" x2="3.01" y2="12"/>
-                <line x1="3" y1="18" x2="3.01" y2="18"/>
-              </svg>
-            </div>
-            <h3>Searchable History</h3>
-            <p>Every request you've ever sent is stored locally in SQLite. Filter by URL, status code, date, or body content. Find that call from last Tuesday and re-send it instantly.</p>
-          </div>
-
-          <div class="feature-card">
-            <div class="feature-icon-wrap">
-              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                <polyline points="8 17 12 21 16 17"/>
-                <line x1="12" y1="12" x2="12" y2="21"/>
-                <path d="M20.88 18.09A5 5 0 0 0 18 9h-1.26A8 8 0 1 0 3 16.29"/>
-              </svg>
-            </div>
-            <h3>Import from Insomnia &amp; Postman</h3>
-            <p>Migrate your existing workflow in seconds. Callsmith reads Insomnia export files and Postman collections directly — all your requests, environments, and folder structure come across automatically. No manual re-entry.</p>
-          </div>
-
-          <div class="feature-card">
-            <div class="feature-icon-wrap">
-              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>
-                <polyline points="9 22 9 12 15 12 15 22"/>
-              </svg>
-            </div>
-            <h3>Native Bruno Compatibility</h3>
-            <p>Already using Bruno? Point Callsmith at your existing collection folder and open it as-is — no conversion, no re-import, no lock-in. Callsmith reads and writes the same <code>.bru</code> format, so you can switch freely between the two tools without touching your files.</p>
-          </div>
-
+        <div class="feature-grid">
+          <article class="card reveal">
+            <h3>Native speed that stays smooth</h3>
+            <p>Compiled .NET desktop app with Avalonia rendering. Instant startup, low memory use, and stable performance on large responses.</p>
+          </article>
+          <article class="card reveal">
+            <h3>Keyboard-first navigation</h3>
+            <p>Use Ctrl+P to jump to any request, Alt+R to reveal the active request, Ctrl+Enter to send, and Ctrl+S to save context.</p>
+          </article>
+          <article class="card reveal">
+            <h3>Filesystem-native collections</h3>
+            <p>Collections are folders and requests are plain files, so your API work is git-friendly, diffable, and shareable by default.</p>
+          </article>
+          <article class="card reveal">
+            <h3>Dynamic environments</h3>
+            <p>Variables can be static values, generated mock data, or values extracted from previous responses using JSONPath, XPath, or regex.</p>
+          </article>
+          <article class="card reveal">
+            <h3>Secret-safe flows</h3>
+            <p>Secret variables are masked in the UI and not stored in history as plaintext, so auth flows stay practical and safer.</p>
+          </article>
+          <article class="card reveal">
+            <h3>History as a real power tool</h3>
+            <p>Auto-capture request and response snapshots, then filter by status, headers, dates, body text, collection, and request name.</p>
+          </article>
+          <article class="card reveal">
+            <h3>Import without disruption</h3>
+            <p>Bring in Postman, Insomnia, and OpenAPI/Swagger collections as new sets or merge additively into existing projects.</p>
+          </article>
+          <article class="card reveal">
+            <h3>Native Bruno compatibility</h3>
+            <p>Point Callsmith at an existing Bruno folder and work directly with the same .bru files without conversion or lock-in friction.</p>
+          </article>
+          <article class="card reveal">
+            <h3>Full visibility layout</h3>
+            <p>Request editor and response viewer stay visible together, with resolved URL always shown and flexible split layout controls.</p>
+          </article>
         </div>
       </div>
     </section>
 
-    <!-- ===================== WHY CALLSMITH ===================== -->
-    <section class="why" id="why">
+    <section class="section section-alt" id="difference">
       <div class="container">
-        <div class="section-header">
-          <h2>Your data. Your files.<br>Your tool.</h2>
-          <p>API clients have been drifting toward lock-in for years. Callsmith was built to offer a better path.</p>
+        <div class="section-head reveal">
+          <p class="kicker">Key Differentiators</p>
+          <h2>Where Callsmith clearly stands apart</h2>
         </div>
-        <div class="why-grid">
-
-          <div class="why-card why-callsmith">
-            <div class="why-card-header">
-              <span class="why-name">Callsmith</span>
-              <span class="why-badge">This is the one</span>
-            </div>
-            <ul class="why-list">
-              <li class="why-pro">No account required — ever</li>
-              <li class="why-pro">Native binary, not Electron</li>
-              <li class="why-pro">Collections live in your filesystem</li>
-              <li class="why-pro">100% offline — planes, VPNs, air-gaps</li>
-              <li class="why-pro">Open source, MIT licensed</li>
-              <li class="why-pro">Free forever, no tiers</li>
-              <li class="why-pro">Import from Insomnia &amp; Postman</li>
-              <li class="why-pro">100% Bruno collection compatibility</li>
-            </ul>
-          </div>
-
-          <div class="why-card why-other">
-            <div class="why-card-header">
-              <span class="why-name">The Alternatives</span>
-            </div>
-            <ul class="why-list">
-              <li class="why-con">Sign in just to send a request</li>
-              <li class="why-con">Electron — heavy, slow to start</li>
-              <li class="why-con">Cloud sync required for collaboration</li>
-              <li class="why-con">Features locked behind paid plans</li>
-              <li class="why-con">Closed source</li>
-              <li class="why-con">Free tier keeps shrinking</li>
-            </ul>
-          </div>
-
+        <div class="compare reveal">
+          <div class="compare-head">Callsmith vs typical cloud-first API clients</div>
+          <div class="compare-row"><span>Account required to start</span><strong>No</strong><em>Often yes</em></div>
+          <div class="compare-row"><span>Collections in your filesystem</span><strong>Yes</strong><em>Often proprietary/workspace-bound</em></div>
+          <div class="compare-row"><span>Open Bruno folders directly</span><strong>Yes</strong><em>Usually no</em></div>
+          <div class="compare-row"><span>Dynamic variables without scripting overhead</span><strong>Yes</strong><em>Usually script-heavy setup</em></div>
+          <div class="compare-row"><span>Deep local request history filters</span><strong>Yes</strong><em>Varies by tier/tool</em></div>
+          <div class="compare-row"><span>Forced background auto-updates</span><strong>No</strong><em>Common</em></div>
+          <div class="compare-row"><span>Feature paywalls</span><strong>No</strong><em>Common</em></div>
         </div>
       </div>
     </section>
 
-    <!-- ===================== PLATFORMS ===================== -->
-    <section class="platforms" id="platforms">
-      <div class="container">
-        <div class="section-header">
-          <h2>Works wherever you work.</h2>
-          <p>Native builds for every major platform, distributed as a single self-contained binary. Nothing to install — just download and run.</p>
+    <section class="section" id="shortcuts">
+      <div class="container shortcut-wrap reveal">
+        <div class="shortcut-copy">
+          <p class="kicker">Memorable UX</p>
+          <h2>Muscle memory, not menu hunting</h2>
+          <p>Callsmith is designed so your fastest path is the default path. The core workflow lives on the keyboard.</p>
         </div>
-        <div class="platforms-grid">
-
-          <div class="platform-card">
-            <div class="platform-os-icon">
-              <!-- Windows logo -->
-              <svg width="40" height="40" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-                <path d="M2 3.5L10.5 2.4v8.1H2V3.5zm9.5-1.3L22 .6v9.9h-10.5V2.2zM2 11.5h8.5v8.1L2 18.5v-7zm9.5.1H22v9.9l-10.5-1.6v-8.3z"/>
-              </svg>
-            </div>
-            <h3>Windows</h3>
-            <p class="platform-arch">x64 &middot; ARM64</p>
-          </div>
-
-          <div class="platform-card">
-            <div class="platform-os-icon">
-              <!-- Apple logo -->
-              <svg width="40" height="40" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-                <path d="M16.0 2.45c.73-.83 1.22-1.96 1.09-3.1-1.06.04-2.34.7-3.1 1.54-.68.76-1.28 1.97-1.12 3.12 1.18.09 2.38-.58 3.13-1.56zM16.9 5.5c-1.73-.1-3.2.98-4.02.98-.83 0-2.08-.93-3.44-.9C7.7 5.62 5.97 6.7 5.06 8.34c-1.85 3.18-.47 7.9 1.32 10.49.88 1.28 1.93 2.7 3.31 2.65 1.33-.05 1.83-.86 3.43-.86 1.6 0 2.06.86 3.44.84 1.43-.02 2.33-1.3 3.21-2.59.56-.82.79-1.23 1.23-2.15-3.23-1.24-3.75-5.86-.55-7.52-.93-1.43-2.32-2.2-3.55-2.7z"/>
-              </svg>
-            </div>
-            <h3>macOS</h3>
-            <p class="platform-arch">Apple Silicon &middot; Intel</p>
-          </div>
-
-          <div class="platform-card">
-            <div class="platform-os-icon">
-              <!-- Terminal icon for Linux -->
-              <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                <rect x="2" y="3" width="20" height="18" rx="2"/>
-                <path d="M7 9l4 3.5L7 16"/>
-                <path d="M14 16h4"/>
-              </svg>
-            </div>
-            <h3>Linux</h3>
-            <p class="platform-arch">x64</p>
-          </div>
-
-        </div>
-        <p class="platforms-note">Distributed as a self-contained single-file executable. No runtime or framework installation required.</p>
-      </div>
-    </section>
-
-    <!-- ===================== CTA ===================== -->
-    <section class="cta">
-      <div class="container">
-        <div class="cta-inner">
-          <h2>Ready to craft<br>better API calls?</h2>
-          <p>Free. Open source. No sign-up. Just download and start sending requests.</p>
-          <div class="cta-actions">
-            <a href="https://github.com/callsmith/callsmith/releases" class="btn btn-primary btn-lg" target="_blank" rel="noopener noreferrer">
-              <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
-                <polyline points="7 10 12 15 17 10"/>
-                <line x1="12" y1="15" x2="12" y2="3"/>
-              </svg>
-              Download Callsmith
-            </a>
-            <a href="https://github.com/callsmith/callsmith" class="btn btn-ghost" target="_blank" rel="noopener noreferrer">
-              Star on GitHub &rarr;
-            </a>
-          </div>
+        <div class="shortcut-grid">
+          <div class="shortcut-item"><kbd>Ctrl + P</kbd><span>Fuzzy-search and jump to any request</span></div>
+          <div class="shortcut-item"><kbd>Alt + R</kbd><span>Reveal active request in the sidebar</span></div>
+          <div class="shortcut-item"><kbd>Ctrl + Enter</kbd><span>Send request instantly</span></div>
+          <div class="shortcut-item"><kbd>Ctrl + H</kbd><span>Open history scoped to current request</span></div>
+          <div class="shortcut-item"><kbd>Ctrl + Shift + H</kbd><span>Open global history</span></div>
+          <div class="shortcut-item"><kbd>Ctrl + S</kbd><span>Save request or environment context</span></div>
         </div>
       </div>
     </section>
 
+    <section class="section section-cta" id="download">
+      <div class="container cta-shell reveal">
+        <p class="kicker">Download</p>
+        <h2>Ship better API workflows with a tool that stays out of your way.</h2>
+        <p>Free. Open source. No account. No cloud dependency. Just download and run.</p>
+        <div class="hero-actions cta-actions">
+          <a class="btn btn-primary" href="https://github.com/callsmith/callsmith/releases" target="_blank" rel="noopener noreferrer">Get Callsmith</a>
+          <a class="btn btn-ghost" href="https://github.com/callsmith/callsmith" target="_blank" rel="noopener noreferrer">Explore the code</a>
+        </div>
+        <ul class="platform-list">
+          <li>Windows x64 and ARM64</li>
+          <li>macOS Apple Silicon and Intel</li>
+          <li>Linux x64</li>
+        </ul>
+      </div>
+    </section>
   </main>
 
-  <!-- ===================== FOOTER ===================== -->
-  <footer>
-    <div class="container">
-      <div class="footer-inner">
-        <div class="footer-brand">
-          <span class="footer-logo">Callsmith</span>
-          <p>A native API client for developers who want more.</p>
-        </div>
-        <nav class="footer-nav" aria-label="Footer navigation">
-          <div class="footer-nav-group">
-            <h4>Project</h4>
-            <a href="https://github.com/callsmith/callsmith" target="_blank" rel="noopener noreferrer">GitHub</a>
-            <a href="https://github.com/callsmith/callsmith/releases" target="_blank" rel="noopener noreferrer">Releases</a>
-            <a href="https://github.com/callsmith/callsmith/issues" target="_blank" rel="noopener noreferrer">Report a Bug</a>
-          </div>
-          <div class="footer-nav-group">
-            <h4>Community</h4>
-            <a href="https://github.com/callsmith/callsmith/discussions" target="_blank" rel="noopener noreferrer">Discussions</a>
-            <a href="https://github.com/callsmith/callsmith/blob/main/CONTRIBUTING.md" target="_blank" rel="noopener noreferrer">Contributing</a>
-          </div>
-        </nav>
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div>
+        <p class="footer-brand">Callsmith</p>
+        <p class="footer-copy">A native API client for developers who care about speed, control, and durable workflows.</p>
       </div>
-      <div class="footer-bottom">
-        <p>Released under the <a href="https://github.com/callsmith/callsmith/blob/main/LICENSE" target="_blank" rel="noopener noreferrer">MIT License</a>.</p>
-        <p>Built with .NET 10, Avalonia UI, and care for developers.</p>
+      <div class="footer-links" aria-label="Footer links">
+        <a href="https://github.com/callsmith/callsmith" target="_blank" rel="noopener noreferrer">GitHub</a>
+        <a href="https://github.com/callsmith/callsmith/releases" target="_blank" rel="noopener noreferrer">Releases</a>
+        <a href="https://github.com/callsmith/callsmith/issues" target="_blank" rel="noopener noreferrer">Issues</a>
+        <a href="https://github.com/callsmith/callsmith/blob/main/LICENSE" target="_blank" rel="noopener noreferrer">MIT License</a>
       </div>
     </div>
   </footer>
-
 </body>
 </html>
