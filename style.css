@@ -268,7 +268,7 @@ a {
   display: inline-flex;
   gap: 18px;
   padding: 13px 0;
-  min-width: 100%;
+  width: max-content;
   animation: ticker-slide 28s linear infinite;
 }
 
